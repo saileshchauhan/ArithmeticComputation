@@ -1,4 +1,7 @@
 #!/bin/bash -x
+
+declare -A resultDic
+
 echo "Enter Number A : "
 read A
 echo "Enter Number B : "
@@ -14,4 +17,10 @@ sum3=$(($C+$(($A/$B))))
 
 sum4=$(((($A%$B))+$C))
 
+resultDic[s1]=$sum1
+resultDic[s2]=$sum2
+resultDic[s3]=$sum3
+resultDic[s4]=$sum4
 
+echo ${resultDic[@]}
+echo ${!resultDic[@]}
