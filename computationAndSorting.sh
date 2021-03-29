@@ -6,3 +6,5 @@ read B
 echo "Enter Number C : "
 read C
 
+sum1=$(($A+$B+$C))
+
