@@ -29,3 +29,5 @@ done
 
 echo ${resultDic[@]}
 echo ${!resultDic[@]}
+sortedResults=$(printf '%s\n' "${arr[@]}" | sort -nr )
+echo "Result in Descending Order : "$sortedResults
