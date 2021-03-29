@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 declare -A resultDic
-
+result=0
 echo "Enter Number A : "
 read A
 echo "Enter Number B : "
@@ -21,6 +21,11 @@ resultDic[s1]=$sum1
 resultDic[s2]=$sum2
 resultDic[s3]=$sum3
 resultDic[s4]=$sum4
+
+for i in ${!resultDic[@]};
+do
+	arr[((result++))]=${resultDic[${i}]}
+done
 
 echo ${resultDic[@]}
 echo ${!resultDic[@]}
